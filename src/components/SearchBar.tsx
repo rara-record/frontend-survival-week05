@@ -8,15 +8,18 @@ type SearchBarProps = {
 }
 
 export default function SearchBar({
-  categories, filterText, setFilterText, setFilterCategory,
+  categories,
+  filterText,
+  setFilterText,
+  setFilterCategory,
 }: SearchBarProps) {
   return (
     <div>
       <TextField
         label="검색"
         placeholder="식당 이름"
-        filterText={filterText}
-        setFilterText={setFilterText}
+        text={filterText}
+        setText={setFilterText}
       />
       <ul style={{
         display: 'flex',
